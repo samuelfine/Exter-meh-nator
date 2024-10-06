@@ -1,0 +1,72 @@
+[gd_scene load_steps=2 format=3 uid="uid://deya6p34vcggh"]
+
+[ext_resource type="PackedScene" uid="uid://5f7hn1bg3ah0" path="res://meshes/furniture.blend" id="1_xscp4"]
+
+[node name="furniture" instance=ExtResource("1_xscp4")]
+
+[node name="Bookcase" parent="." index="0"]
+visible = false
+
+[node name="small-table" parent="." index="1"]
+visible = false
+
+[node name="sofa" parent="." index="2"]
+visible = false
+
+[node name="small-table-1" parent="." index="3"]
+visible = false
+
+[node name="small-table--2" parent="." index="4"]
+visible = false
+
+[node name="small-table-3" parent="." index="5"]
+visible = false
+
+[node name="small-table-4" parent="." index="6"]
+visible = false
+
+[node name="Vase1" parent="." index="7"]
+visible = false
+
+[node name="radiator" parent="." index="8"]
+visible = false
+
+[node name="van-orig" parent="." index="9"]
+visible = false
+
+[node name="van" parent="." index="10"]
+visible = false
+
+[node name="Cube" parent="." index="11"]
+transform = Transform3D(1.21917, 0, 0, 0, 1.21917, 0, 0, 0, 1.21917, 0, 0, 1.58442)
+visible = false
+
+[node name="tv" parent="." index="12"]
+visible = false
+
+[node name="book" parent="." index="13"]
+visible = false
+
+[node name="book_001" parent="." index="14"]
+visible = false
+
+[node name="book_003" parent="." index="16"]
+visible = false
+
+[node name="shelf" parent="." index="17"]
+visible = false
+
+[node name="vase2" parent="." index="18"]
+visible = false
+
+[node name="lamp" parent="." index="19"]
+visible = false
+
+[node name="controller" parent="." index="20"]
+transform = Transform3D(0.639471, 0, 0, 0, 0.389236, 0, 0, 0, 0.393784, 0, 0, -1.52258)
+
+[node name="console" parent="." index="21"]
+visible = false
+
+[node name="redled" parent="." index="22"]
+visible = false

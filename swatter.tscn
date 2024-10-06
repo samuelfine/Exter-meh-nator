@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx2j4kyev33uh"]
+
+[ext_resource type="PackedScene" uid="uid://cjlwu4sri78kj" path="res://meshes/swatter.blend" id="1_f0yh3"]
+
+[node name="swatter" instance=ExtResource("1_f0yh3")]
+
+[node name="Cylinder" parent="." index="0"]
+cast_shadow = 0

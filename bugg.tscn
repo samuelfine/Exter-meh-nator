@@ -1,0 +1,440 @@
+[gd_scene load_steps=24 format=3 uid="uid://cy1pd0tsan43x"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_psl6n"]
+[ext_resource type="Material" uid="uid://rybutrghpv5o" path="res://black.tres" id="2_obuvr"]
+[ext_resource type="Shader" path="res://pearl.gdshader" id="3_runip"]
+[ext_resource type="AudioStream" uid="uid://drsd8fgm8uycg" path="res://audio/skitter1.wav" id="4_1a3vb"]
+[ext_resource type="AudioStream" uid="uid://bc3jpqdwuatqy" path="res://audio/bugg1.wav" id="5_0n78d"]
+[ext_resource type="AudioStream" uid="uid://cmf7ssy5ce4gs" path="res://audio/bugg2.wav" id="6_lep4u"]
+[ext_resource type="AudioStream" uid="uid://dpmwxy6xl0085" path="res://audio/bugg4.wav" id="8_uam4v"]
+[ext_resource type="AudioStream" uid="uid://gtla5ln4m832" path="res://audio/bugg5.wav" id="9_fshx6"]
+
+[sub_resource type="Animation" id="Animation_t8xqs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("alive/leg:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, 0.336622, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("alive/leg2:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alive/leg3:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, -0.241658, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("alive/leg4:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, -2.9099, 4.99134e-15)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("alive/leg5:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, -3.14159, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("alive/leg6:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.523599, 2.75745, 6.01692e-15)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("alive/body2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5708)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("alive/body:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 1.5708)]
+}
+
+[sub_resource type="Animation" id="Animation_il3or"]
+resource_name = "run"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("alive/leg:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.523599, 0.336622, 0), Vector3(0.896597, 0.911153, 0.329836)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("alive/leg2:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.523599, 0, 0), Vector3(0.341736, 3.53287e-09, 8.39096e-09)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("alive/leg3:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.523599, -0.241658, 0), Vector3(0.947284, -0.482793, 0.266596)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("alive/leg4:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = false
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.523599, -2.9099, 4.99134e-15), Vector3(0.79257, -2.61382, 0.173507)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("alive/leg5:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = false
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.841528, -3.14159, 5.03316e-08), Vector3(0.367427, -3.14159, -1.78802e-08)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("alive/leg6:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = false
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.523599, 2.75745, 6.01692e-15), Vector3(0.722933, 2.56827, -0.143722)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("alive/body2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(8.88179e-16, -0.248901, 1.5708), Vector3(-1.72162e-15, 0.704886, 1.5708)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("alive/body:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-7.58228e-16, 0.605786, 1.5708), Vector3(-4.73656e-16, -0.573882, 1.5708)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j8udm"]
+_data = {
+"RESET": SubResource("Animation_t8xqs"),
+"run": SubResource("Animation_il3or")
+}
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4tvk5"]
+radius = 0.108915
+height = 0.416128
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nk5ud"]
+render_priority = 0
+shader = ExtResource("3_runip")
+shader_parameter/fresnel_power = 3.0
+shader_parameter/interference_frequency = 3.0
+shader_parameter/base = Color(3.46541e-06, 0.85053, 0.438051, 1)
+shader_parameter/shift = Color(0.282481, 0.432606, 1, 1)
+shader_parameter/roughness = 0.3
+shader_parameter/metallic = 0.7
+shader_parameter/light_direction = Vector3(0, -1, 0)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mt1jj"]
+material = SubResource("ShaderMaterial_nk5ud")
+radius = 0.1
+height = 0.25
+
+[sub_resource type="BoxMesh" id="BoxMesh_glxlp"]
+material = ExtResource("2_obuvr")
+size = Vector3(1, 1, 2)
+
+[sub_resource type="SphereMesh" id="SphereMesh_66cad"]
+material = SubResource("ShaderMaterial_nk5ud")
+radius = 0.1
+height = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l51rw"]
+metallic = 0.11
+roughness = 0.43
+
+[sub_resource type="SphereMesh" id="SphereMesh_48tat"]
+material = SubResource("StandardMaterial3D_l51rw")
+
+[sub_resource type="SphereMesh" id="SphereMesh_mg8da"]
+material = ExtResource("2_obuvr")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_4bv2k"]
+material = ExtResource("2_obuvr")
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l1045"]
+render_priority = 0
+shader = ExtResource("3_runip")
+shader_parameter/fresnel_power = 3.0
+shader_parameter/interference_frequency = 3.0
+shader_parameter/base = Color(3.46541e-06, 0.85053, 0.438051, 1)
+shader_parameter/shift = Color(0.282481, 0.432606, 1, 1)
+shader_parameter/roughness = 0.3
+shader_parameter/metallic = 0.7
+shader_parameter/light_direction = Vector3(0, -1, 0)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_48dvp"]
+material = SubResource("ShaderMaterial_l1045")
+radius = 0.1
+height = 0.25
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_63lix"]
+random_pitch = 1.1
+random_volume_offset_db = 0.5
+streams_count = 4
+stream_0/stream = ExtResource("5_0n78d")
+stream_1/stream = ExtResource("6_lep4u")
+stream_1/weight = 3.0
+stream_2/stream = ExtResource("8_uam4v")
+stream_2/weight = 3.0
+stream_3/stream = ExtResource("9_fshx6")
+stream_3/weight = 3.0
+
+[node name="Bugg" type="CharacterBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_psl6n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j8udm")
+}
+speed_scale = 15.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_4tvk5")
+
+[node name="alive" type="Node3D" parent="."]
+
+[node name="body" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(-3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 0, 0, 1, 0.0630636, 0, -2.7566e-09)
+mesh = SubResource("CapsuleMesh_mt1jj")
+skeleton = NodePath("../..")
+
+[node name="body2" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(-3.61999e-06, -1, 0, 1, -3.61999e-06, 0, 0, 0, 1, -0.0977188, 0, 4.27143e-09)
+mesh = SubResource("CapsuleMesh_mt1jj")
+skeleton = NodePath("../..")
+
+[node name="leg" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(0.0350806, 0.00429493, 0.0345269, 0, 0.022522, -0.0603514, -0.0122761, 0.0122733, 0.0986649, -0.1076, 0.0347414, -0.133942)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.099719, 0, -3.56106, -1.03859)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(0.0371665, 0, 0, 0, 0.022522, -0.0603516, 0, 0.0130031, 0.104532, -0.0225966, 0.0347414, -0.133942)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg2"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.099719, -1.19209e-07, -3.56106, -1.03859)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="leg3" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(0.0360865, -0.0031118, -0.0250157, 0, 0.022522, -0.0603513, 0.00889441, 0.0126252, 0.101494, 0.0742745, 0.0347414, -0.133942)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg3"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.099719, -2.38419e-07, -3.56106, -1.03859)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="leg4" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(-0.0361733, -0.00298584, -0.024003, 1.60657e-16, 0.022522, -0.0603512, 0.00853435, -0.0126556, -0.101738, 0.0703187, 0.0347414, 0.121491)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg4"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.0997191, 2.38419e-07, -3.49663, -1.01455)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="leg5" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(-0.0371665, -3.29652e-08, -2.65008e-07, 0, 0.022522, -0.0603516, 9.42238e-08, -0.0130031, -0.104532, -0.0146851, 0.0347414, 0.121491)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg5"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.0997191, 8.9407e-08, -3.49663, -1.01455)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="leg6" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(-0.0344578, 0.00487309, 0.0391747, 1.93667e-16, 0.022522, -0.0603514, -0.0139287, -0.0120554, -0.0969134, -0.111556, 0.0347414, 0.121491)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../..")
+
+[node name="leg2" type="MeshInstance3D" parent="alive/leg6"]
+transform = Transform3D(1, -2.4831e-08, -5.90735e-08, 3.09236e-08, 0.0997191, 4.61819, -1.03141e-08, -0.214382, 0.0997191, 0, -3.49663, -1.01455)
+mesh = SubResource("BoxMesh_glxlp")
+skeleton = NodePath("../../..")
+
+[node name="face" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.165438, 0.101614, 0)
+mesh = SubResource("SphereMesh_66cad")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="alive/face"]
+transform = Transform3D(0.132814, 0, 4.44089e-16, 0, 0.132814, 0, -4.44089e-16, 0, 0.132814, 0.0679168, 0.0321296, 0.0520894)
+mesh = SubResource("SphereMesh_48tat")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="alive/face/MeshInstance3D"]
+transform = Transform3D(0.457542, -0.0571304, 0.0246054, 0.0622037, 0.420225, -0.180986, -1.46221e-09, 0.182651, 0.424091, 0.30382, 0.0142517, -0.00738716)
+mesh = SubResource("SphereMesh_mg8da")
+skeleton = NodePath("../../../antennae")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="alive/face"]
+transform = Transform3D(0.132814, 0, 4.44089e-16, 0, 0.132814, 0, -4.44089e-16, 0, 0.132814, 0.0679168, 0.0321296, -0.0461075)
+mesh = SubResource("SphereMesh_48tat")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="alive/face/MeshInstance3D2"]
+transform = Transform3D(0.457542, -0.0571304, 0.0246054, 0.0622037, 0.420225, -0.180986, -1.46221e-09, 0.182651, 0.424091, 0.30382, 0.0142517, -0.0472902)
+mesh = SubResource("SphereMesh_mg8da")
+skeleton = NodePath("../../../antennae")
+
+[node name="antennae" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(0.990885, -0.123725, 0.0532871, 0.134713, 0.910068, -0.391956, -3.16669e-09, 0.395562, 0.91844, 0.15121, 0.224852, 0.0694675)
+mesh = SubResource("CylinderMesh_4bv2k")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="alive/antennae"]
+transform = Transform3D(0.0613273, 0, 0, 0, 0.0613273, 0, 0, 0, 0.0613273, 0, 0.0449954, 0)
+mesh = SubResource("SphereMesh_mg8da")
+
+[node name="antennae2" type="MeshInstance3D" parent="alive"]
+transform = Transform3D(0.990885, -0.123726, -0.053285, 0.134713, 0.910075, 0.39194, 3.9844e-10, -0.395546, 0.918446, 0.15121, 0.224852, -0.0616274)
+mesh = SubResource("CylinderMesh_4bv2k")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="alive/antennae2"]
+transform = Transform3D(0.0613273, 0, 0, 0, 0.0613273, 0, 0, 0, 0.0613273, 0, 0.0449954, 0)
+mesh = SubResource("SphereMesh_mg8da")
+
+[node name="dead" type="Node3D" parent="."]
+visible = false
+
+[node name="dead" type="MeshInstance3D" parent="dead"]
+transform = Transform3D(-2.60833e-08, -3.92617, 0, 0.596717, -1.71619e-07, 0, 0, 0, 1.5316, 0.00507814, 0, -2.21968e-10)
+mesh = SubResource("CapsuleMesh_48dvp")
+skeleton = NodePath("../..")
+
+[node name="dead2" type="MeshInstance3D" parent="dead"]
+transform = Transform3D(-1.56088e-08, -2.34951, 1.22709, 0.596717, -1.71619e-07, 0, 2.08974e-08, 3.14558, 0.916544, 0.00507814, 0, -2.21968e-10)
+mesh = SubResource("CapsuleMesh_48dvp")
+skeleton = NodePath("../..")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_1a3vb")
+unit_size = 5.0
+max_db = 0.0
+max_distance = 20.0
+
+[node name="AudioStreamPlayerJump" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource("AudioStreamRandomizer_63lix")
+volume_db = -3.0
+max_db = -3.0
+pitch_scale = 1.2
