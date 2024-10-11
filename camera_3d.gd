@@ -5,7 +5,7 @@ extends Camera3D
 
 var swat_timer = 2
 var game_started := false
-var move_speed := 0.01
+var move_speed := 0.6
 var speed_increase_timer := 0.0
 
 # Called when the node enters the scene tree for the first time.
@@ -25,12 +25,12 @@ func _process(delta: float) -> void:
 		speed_increase_timer += delta
 		if speed_increase_timer >= 5:
 			speed_increase_timer = 0
-			move_speed = min(move_speed + 0.001, 0.0155)
+			move_speed = min(move_speed + 0.06, 1.05)
 
 		var xform := transform # your transform
 		xform = xform.looking_at(player.global_position,Vector3.UP)
-		transform = transform.interpolate_with(xform, move_speed)
-		position = position.move_toward(Vector3(player.global_position.x + 0.1, global_position.y, player.global_position.z + 0.1), move_speed)
+		transform = transform.interpolate_with(xform, (move_speed + 0.1) * delta)
+		position = position.move_toward(Vector3(player.global_position.x + 0.1, global_position.y, player.global_position.z + 0.1), move_speed * delta)
 		$SwatSpot.global_position.y = 0
 
 		swat_timer -= delta
@@ -59,7 +59,7 @@ func _on_game_started():
 	game_started = true
 	$swatter.visible = true
 	$Decal.visible = true
-	move_speed = 0.01
+	move_speed = 0.6
 	#$Decal.visible = true
 	speed_increase_timer = 0.0
 
