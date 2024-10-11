@@ -1,6 +1,7 @@
 extends Camera3D
 
 @export var player : CharacterBody3D
+@export var swat_zone : Area3D
 
 var swat_timer = 2
 var game_started := false
@@ -30,6 +31,7 @@ func _process(delta: float) -> void:
 		xform = xform.looking_at(player.global_position,Vector3.UP)
 		transform = transform.interpolate_with(xform, move_speed)
 		position = position.move_toward(Vector3(player.global_position.x + 0.1, global_position.y, player.global_position.z + 0.1), move_speed)
+		$SwatSpot.global_position.y = 0
 
 		swat_timer -= delta
 		if swat_timer <= 0:
@@ -41,7 +43,7 @@ func _whiff():
 
 
 func _swat():
-	var cols = $SwatZone.get_overlapping_bodies()
+	var cols = swat_zone.get_overlapping_bodies()
 	for col in cols:
 		if col.is_in_group("furniture"):
 			$AudioStreamPlayer3D.playing = true
@@ -58,6 +60,7 @@ func _on_game_started():
 	$swatter.visible = true
 	$Decal.visible = true
 	move_speed = 0.01
+	#$Decal.visible = true
 	speed_increase_timer = 0.0
 
 

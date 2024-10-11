@@ -1371,6 +1371,7 @@ shape = SubResource("CylinderShape3D_111h0")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lamp"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91317, 0)
+visible = false
 light_color = Color(1, 1, 0.752941, 1)
 shadow_enabled = true
 
@@ -1397,6 +1398,7 @@ shape = SubResource("CylinderShape3D_111h0")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lamp3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91317, 0)
+visible = false
 light_color = Color(1, 1, 0.752941, 1)
 shadow_enabled = true
 
@@ -1421,6 +1423,7 @@ shape = SubResource("CylinderShape3D_111h0")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lamp4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91317, 0)
+visible = false
 light_color = Color(1, 1, 0.752941, 1)
 shadow_enabled = true
 
@@ -1447,6 +1450,7 @@ shape = SubResource("CylinderShape3D_111h0")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="lamp2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91317, 0)
+visible = false
 light_color = Color(1, 1, 0.752941, 1)
 shadow_enabled = true
 
