@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgu8xjs3spjbt"
 path.s3tc="res://.godot/imported/ImphenziaPixel-Attributes.png-e4cadb958d76bd5dc501d64a49a60489.s3tc.ctex"
+path.etc2="res://.godot/imported/ImphenziaPixel-Attributes.png-e4cadb958d76bd5dc501d64a49a60489.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://meshes/textures/ImphenziaPixel-Attributes.png"
-dest_files=["res://.godot/imported/ImphenziaPixel-Attributes.png-e4cadb958d76bd5dc501d64a49a60489.s3tc.ctex"]
+dest_files=["res://.godot/imported/ImphenziaPixel-Attributes.png-e4cadb958d76bd5dc501d64a49a60489.s3tc.ctex", "res://.godot/imported/ImphenziaPixel-Attributes.png-e4cadb958d76bd5dc501d64a49a60489.etc2.ctex"]
 
 [params]
 

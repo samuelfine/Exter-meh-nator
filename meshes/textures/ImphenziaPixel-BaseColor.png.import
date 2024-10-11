@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bntys21xxnrm4"
 path.s3tc="res://.godot/imported/ImphenziaPixel-BaseColor.png-a8c32a6704d4206c1ebbbe3bd9f22855.s3tc.ctex"
+path.etc2="res://.godot/imported/ImphenziaPixel-BaseColor.png-a8c32a6704d4206c1ebbbe3bd9f22855.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://meshes/textures/ImphenziaPixel-BaseColor.png"
-dest_files=["res://.godot/imported/ImphenziaPixel-BaseColor.png-a8c32a6704d4206c1ebbbe3bd9f22855.s3tc.ctex"]
+dest_files=["res://.godot/imported/ImphenziaPixel-BaseColor.png-a8c32a6704d4206c1ebbbe3bd9f22855.s3tc.ctex", "res://.godot/imported/ImphenziaPixel-BaseColor.png-a8c32a6704d4206c1ebbbe3bd9f22855.etc2.ctex"]
 
 [params]
 
